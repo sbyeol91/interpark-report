@@ -27,9 +27,9 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Interpark Report REST API")
+                .title("{Project} System REST API")
                 .version("0.1.1")
-                .description("Interpark Report")
+                .description("{Project}")
                 .build();
     }
 }
