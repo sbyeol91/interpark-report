@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Api(tags = "Board CRUD API", description = "게시글 조회, 입력, 수정, 삭제 API")
+@RestController
 @RequestMapping(path = ReportConst.VER_PATH)
 public interface BoardController {
     static final String RESOURCE = "board";
@@ -37,6 +38,6 @@ public interface BoardController {
     @DeleteMapping(path = RESOURCE + "/{seq}")
     @ApiOperation("게시글 삭제 API")
     @ApiImplicitParams({@ApiImplicitParam(name = "seq", value = "게시글 SEQ")})
-    ResponseEntity<?> delete(@PathVariable Long seq, @RequestBody Board request);
+    ResponseEntity<?> delete(@PathVariable Long seq);
 
 }

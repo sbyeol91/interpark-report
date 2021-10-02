@@ -1,7 +1,7 @@
 package com.interpark.sbyeol.report.config;
 
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
@@ -11,11 +11,10 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-@EnableAutoConfiguration
 @EnableSwagger2
+@Configuration
 public class SwaggerConfig {
-
-    @Bean
+	@Bean
     public Docket restAPI() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
@@ -27,9 +26,9 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("{Project} System REST API")
+                .title("Interpark Report REST API")
                 .version("0.1.1")
-                .description("{Project}")
+                .description("Interpark Report")
                 .build();
     }
 }

@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -13,6 +14,7 @@ import com.interpark.sbyeol.report.api.board.controller.BoardController;
 import com.interpark.sbyeol.report.api.board.model.Board;
 import com.interpark.sbyeol.report.api.board.repository.BoardRepository;
 
+@Service
 public class BoardService implements BoardController {
 
     @Autowired
@@ -48,7 +50,7 @@ public class BoardService implements BoardController {
     }
 
     @Override
-    public ResponseEntity<?> delete(@PathVariable Long seq,  @RequestBody Board request) {
+    public ResponseEntity<?> delete(@PathVariable Long seq) {
     	Optional<Board> board = boardRepository.findById(seq);
     	board.ifPresent(deleteBoard ->{
     		boardRepository.delete(deleteBoard);
