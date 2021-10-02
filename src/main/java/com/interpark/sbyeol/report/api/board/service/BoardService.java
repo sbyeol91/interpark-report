@@ -1,5 +1,12 @@
 package com.interpark.sbyeol.report.api.board.service;
 
+/**
+* 게시글 Create, Read, Update, Delete 비지니스 로직 구현(Service)
+* @author sbyeol91
+* @version 0.1.1
+* @since 21.10.03
+*/
+
 import java.util.List;
 import java.util.Optional;
 

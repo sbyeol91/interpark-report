@@ -1,5 +1,13 @@
 package com.interpark.sbyeol.report.api.board.controller;
 
+/**
+* 게시글 Create, Read, Update, Delete
+* @author sbyeol91
+* @version 0.1.1
+* @since 21.10.03
+*/
+
+
 import com.interpark.sbyeol.report.api.board.model.Board;
 import com.interpark.sbyeol.report.config.ReportConst;
 import io.swagger.annotations.Api;

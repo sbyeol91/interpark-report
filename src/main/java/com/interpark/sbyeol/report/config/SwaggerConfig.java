@@ -1,5 +1,12 @@
 package com.interpark.sbyeol.report.config;
 
+/**
+* Swagger-Ui 설정
+* @author sbyeol91
+* @version 0.1.1
+* @since 21.10.03
+*/
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
