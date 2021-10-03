@@ -10,7 +10,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.filter.CharacterEncodingFilter;
 
-@SpringBootTest
 public abstract class AbstractControllerTest {
 
 	protected MockMvc mockMvc;
